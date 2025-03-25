@@ -1,0 +1,14 @@
+network:
+  renderer: networkd
+  ethernets:
+    ens18:
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 10.101.48.32/22
+      nameservers:
+        addresses: [10.101.48.3]
+        search: [tsnet.local]
+      routes:
+        - to: default
+          via: 10.101.48.1
